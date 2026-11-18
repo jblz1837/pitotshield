@@ -7,6 +7,7 @@ let intercepted=0;
 await page.route("https://www.googletagmanager.com/**", route=>route.fulfill({status:200,contentType:"application/javascript",body:"/* mocked analytics network loader */"}));
 await page.route("https://api.emailjs.com/api/v1.0/email/send",async route=>{
  const request=route.request();
+ if(request.method()==="OPTIONS") { await route.fulfill({status:204,headers:{"access-control-allow-origin":"*","access-control-allow-headers":"content-type","access-control-allow-methods":"POST,OPTIONS"}});return; }
  const data=JSON.parse(request.postData()||"{}");
  assert.equal(data.service_id,"test-service");
  assert.equal(data.template_id,"test-template");
@@ -41,6 +42,6 @@ try{
  await page.getByRole("button",{name:"Send Inquiry"}).click();
  await page.getByRole("status").getByText("Your inquiry was submitted successfully.").waitFor({timeout:12000});
  assert.equal(intercepted,1,"One mocked EmailJS request expected");
- await page.waitForFunction(()=>window.dataLayer?.some?.(x=>x?.[0]==="event" && x?.[1]==="generate_lead"),{timeout:8000});
+ await page.waitForFunction(()=>window.dataLayer?.some?.(x=>x?.[0]==="event" && x?.[1]==="generate_lead"),null,{timeout:8000});
  console.log("PASS browser: logo, 7 videos, 5 PDF download links, mocked EmailJS lead and GA4 event");
 }finally{await browser.close()}
