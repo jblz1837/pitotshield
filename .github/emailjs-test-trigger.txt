@@ -1,0 +1,1 @@
+Run a single real EmailJS contact-form QA test if the three public EmailJS repository variables are configured. Do not touch live domain.
