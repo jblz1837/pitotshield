@@ -1,1 +1,1 @@
-2026-11-18: One diagnostic EmailJS request with supplied public IDs; capture 403 response text to identify failure. Do not repeat without new information.
+2026-11-18: One diagnostic inquiry request to EmailJS with actual IDs and corrected workflow syntax. Capture API error response if rejected; no changes to live domain.
