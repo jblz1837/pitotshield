@@ -1,1 +1,1 @@
-Recheck EmailJS configuration using Variables OR Secrets with per-setting presence feedback after owner confirmed setup (2026-11-18). Single test message only if complete.
+2026-11-18 confirmation: user saved all three PITOTSHIELD_EMAILJS_* repository variables. Send exactly one labeled website QA delivery test if all three values are now available.
