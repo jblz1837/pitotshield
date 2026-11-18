@@ -1,4 +1,4 @@
-name: Publish review preview to GitHub Pages (manual only)
+name: Publish APPROVED preview — select MAIN to run
 
 on:
   workflow_dispatch:
