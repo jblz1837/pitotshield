@@ -16,7 +16,7 @@ export default function LeadForm() {
   try {
    const res=await fetch("https://api.emailjs.com/api/v1.0/email/send",{
     method:"POST",headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({service_id:process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,template_id:process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,user_id:process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,template_params:{from_name:values.name,reply_to:values.email,from_email:values.email,company:values.company,aircraft:values.aircraft,interest:values.interest,message:values.message}})
+    body:JSON.stringify({service_id:process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,template_id:process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,user_id:process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,template_params:{to_email:"jrussell@degroffaviation.com",from_name:values.name,reply_to:values.email,from_email:values.email,company:values.company,aircraft:values.aircraft,interest:values.interest,message:values.message}})
    });
    if (!res.ok) throw new Error("EmailJS response "+res.status);
    setState("sent");
