@@ -11,9 +11,9 @@ jobs:
   emailjs-test:
     runs-on: ubuntu-latest
     env:
-      EMAILJS_SERVICE: ${{ vars.PITOTSHIELD_EMAILJS_SERVICE_ID || secrets.PITOTSHIELD_EMAILJS_SERVICE_ID }}
-      EMAILJS_TEMPLATE: ${{ vars.PITOTSHIELD_EMAILJS_TEMPLATE_ID || secrets.PITOTSHIELD_EMAILJS_TEMPLATE_ID }}
-      EMAILJS_PUBLIC: ${{ vars.PITOTSHIELD_EMAILJS_PUBLIC_KEY || secrets.PITOTSHIELD_EMAILJS_PUBLIC_KEY }}
+      EMAILJS_SERVICE: service_dw49i0o
+      EMAILJS_TEMPLATE: template_ifsa9jp
+      EMAILJS_PUBLIC: PJp-Gm6ZhIgKkvlLu
     steps:
       - name: Check presence of all three EmailJS identifiers without exposing values
         id: config
