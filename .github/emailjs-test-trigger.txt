@@ -1,1 +1,1 @@
-2026-11-18 confirmation: user saved all three PITOTSHIELD_EMAILJS_* repository variables. Send exactly one labeled website QA delivery test if all three values are now available.
+2026-11-18: User confirmed corrected real EmailJS service ID, template ID, and public key. Run one labeled delivery QA request, confirm provider response. Do not change production domain.
