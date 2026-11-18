@@ -1,1 +1,1 @@
-Preview refresh: header logo asset fix from feature/complete-approved-redesign (WebP direct image instead of SVG wrapper). Keep production domain untouched.
+Publish the approved redesign with migrated product media, tested local PDF links and video gallery. Live domain remains unchanged. QA: GitHub browser smoke run 44347967187.
