@@ -1,0 +1,60 @@
+name: Migrate legacy product media and technical PDFs
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/asset-migration-trigger.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pitotshield-asset-migration
+  cancel-in-progress: false
+
+jobs:
+  transfer-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout approved redesign branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/complete-approved-redesign
+          path: redesigned
+          persist-credentials: true
+      - name: Retrieve original public website source
+        run: git clone --depth 1 --branch main https://github.com/Mullign/Degroff.git original
+      - name: Verify original source and copy all documents and media
+        shell: bash
+        run: |
+          set -euo pipefail
+          src="original/degroff-next/public"
+          dst="redesigned/public"
+          test -f "$src/docs/pitotshield-v2-manual.pdf"
+          test -f "$src/docs/pitotshield-v2-spec-sheet.pdf"
+          test -f "$src/assets/psv2-demo.mp4"
+          mkdir -p "$dst/docs" "$dst/assets"
+          cp -a "$src/docs/." "$dst/docs/"
+          cp -a "$src/assets/." "$dst/assets/"
+          diff -qr "$src/docs" "$dst/docs"
+          diff -qr "$src/assets" "$dst/assets"
+          test "$(find "$dst/docs" -maxdepth 1 -name '*.pdf' | wc -l)" -eq 7
+          test "$(find "$dst/assets" -type f -name '*.mp4' | wc -l)" -ge 7
+          echo "Docs and product media: exact byte-for-byte copies."
+          du -sh "$dst/docs" "$dst/assets"
+      - name: Commit migrated assets to approved branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd redesigned
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/docs public/assets
+          if git diff --cached --quiet; then
+            echo "Legacy media already up to date"
+            exit 0
+          fi
+          git commit -m "Migrate original product media and technical PDFs unchanged"
+          git push origin HEAD:feature/complete-approved-redesign

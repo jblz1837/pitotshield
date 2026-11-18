@@ -1,0 +1,1 @@
+Transfer the publicly hosted DeGroff website's approved product assets, technical documents and videos to the review branch. Keep production domain unchanged.

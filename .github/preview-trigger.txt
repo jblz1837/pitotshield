@@ -1,0 +1,1 @@
+Publish the approved redesign with migrated product media, tested local PDF links and video gallery. Live domain remains unchanged. QA: GitHub browser smoke run 44347967187.
