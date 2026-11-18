@@ -1,1 +1,1 @@
-2026-11-18: Diagnose EmailJS browser network preflight and browser errors; run one conditional test. Prior browser pass observed zero POSTs.
+2026-11-18 final controlled QA: wait for EmailJS POST response before exiting. User authorized testing; do not alter production domain.
