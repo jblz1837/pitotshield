@@ -1,1 +1,1 @@
-Publish the approved redesign with migrated product media, tested local PDF links and video gallery. Live domain remains unchanged. QA: GitHub browser smoke run 44347967187.
+2026-11-18: Rebuild review-only Pages preview with newly confirmed EmailJS public key 9aF0aO99oDFlU0X9H; production domain unchanged.
