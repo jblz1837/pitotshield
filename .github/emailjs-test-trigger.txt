@@ -1,1 +1,1 @@
-2026-11-18: user confirmed EmailJS service_dw49i0o template_ifsa9jp and public key are set as GitHub repository variable values. Run one labeled live inquiry QA test. This is a test, not a real customer lead.
+Run one owner-authorized EmailJS QA send using the actual public EmailJS identifiers user supplied in this conversation, independent of incorrectly configured Actions Variables. No production domain changes.
