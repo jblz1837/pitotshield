@@ -2,6 +2,10 @@ name: Publish APPROVED preview — select MAIN to run
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/preview-trigger.txt"
 
 permissions:
   contents: read
