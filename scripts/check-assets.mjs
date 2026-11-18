@@ -20,7 +20,8 @@ for (const file of videos){
 const logo=join(base,"brand","degroff-logo.webp");
 assert.ok(statSync(logo).size>500,"Logo missing or empty");
 const html=readFileSync(join("out","index.html"),"utf8");
-for(const file of docs) assert.ok(html.includes(encodeURIComponent(file)),"Missing PDF link in static HTML: "+file);
+for(const file of docs.filter(f=>!["pitotshield-v2-installation-guide.pdf","pitotshield-v2-safety-compliance.pdf"].includes(f))) assert.ok(html.includes(encodeURIComponent(file)),"Missing PDF link in static HTML: "+file);
+for(const file of ["pitotshield-v2-installation-guide.pdf","pitotshield-v2-safety-compliance.pdf"]) assert.ok(!html.includes(encodeURIComponent(file)),"Placeholder-only PDF must not be advertised: "+file);
 for(const file of videos) assert.ok(html.includes(encodeURIComponent(file)),"Missing video in static HTML: "+file);
 assert.ok(html.includes("degroff-logo.webp"),"Logo not referenced in HTML");
 assert.ok(readFileSync(join("components","LeadForm.tsx"),"utf8").includes("mailto:"),"Unconfigured contact form fallback absent from code");
