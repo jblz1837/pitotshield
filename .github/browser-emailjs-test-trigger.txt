@@ -1,1 +1,1 @@
-2026-11-18: User confirmed EmailJS template recipient jrussell@degroffaviation.com has been saved. Run a single labeled real-browser QA inquiry to verify email acceptance and receipt; production unchanged.
+2026-11-18: User confirmed Outlook has been reconnected inside EmailJS. Send one QA-only browser contact-form inquiry using approved redesign and verify the API delivery response; production domain remains unchanged.
