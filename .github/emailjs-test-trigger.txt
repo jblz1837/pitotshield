@@ -1,1 +1,1 @@
-Run one owner-authorized EmailJS QA send using the actual public EmailJS identifiers user supplied in this conversation, independent of incorrectly configured Actions Variables. No production domain changes.
+2026-11-18: One diagnostic EmailJS request with supplied public IDs; capture 403 response text to identify failure. Do not repeat without new information.
