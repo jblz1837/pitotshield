@@ -16,13 +16,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Require approved redesign branch
+      - name: Require main dispatch for GitHub Pages environment
         run: |
-          if [ "${{ github.ref_name }}" != "feature/complete-approved-redesign" ]; then
-            echo "Use feature/complete-approved-redesign for the approved website preview." >&2
+          if [ "${{ github.ref_name }}" != "main" ]; then
+            echo "Run this workflow from main. It explicitly checks out the approved redesign branch." >&2
             exit 1
           fi
       - uses: actions/checkout@v4
+        with:
+          ref: feature/complete-approved-redesign
+      - name: Confirm approved redesign checkout
+        run: |
+          test "$(git branch --show-current)" = "feature/complete-approved-redesign"
+          echo "Building approved branch: $(git rev-parse HEAD)"
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
