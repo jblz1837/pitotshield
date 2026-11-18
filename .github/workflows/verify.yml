@@ -28,6 +28,8 @@ jobs:
         run: npm run build
       - name: Verify output
         run: test -f out/index.html
+      - name: Verify migrated PDFs, MP4s and local links
+        run: npm run test:assets
       - name: Upload build for review
         uses: actions/upload-artifact@v4
         with:
