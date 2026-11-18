@@ -49,3 +49,32 @@ PitotShield V2™ must be removed before aircraft operation. Verify fit and oper
 ## GitHub workflow
 
 Changes in `feature/complete-approved-redesign` are intended for review in a pull request against `main`. There is **no deploy-on-push workflow** in this repository. Do not point the custom domain to a preview or incomplete app.
+
+## Verified hosting architecture and cutover plan (November 2026)
+
+The **current production** website is deployed from [Mullign/Degroff](https://github.com/Mullign/Degroff) via `.github/workflows/nextjs.yml`. That workflow builds the app in `degroff-next/` with `output: "export"`, publishes `out/` to GitHub Pages on pushes to `main`, and the old repository has `CNAME` set to `pitotshields.com`.
+
+This **new** repository is prepared for the same GitHub Pages static-export format:
+- `next.config.ts` exports to `out/`, supports base paths, and disables Next image optimization for static Pages hosting.
+- `.github/workflows/verify.yml` checks TypeScript and static export on pull requests. It does **not deploy**.
+- `.github/workflows/pages-preview.yml` deploys **only when manually triggered**, using `/pitotshield` as the project base path. Its intended preview URL is `https://jblz1837.github.io/pitotshield/`.
+- There is **no** `CNAME` in this new repository, intentionally. Do **not** attach `pitotshields.com` to two GitHub Pages projects.
+
+### Enable a GitHub Pages preview (account action required)
+
+1. In `jblz1837/pitotshield`, open **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Open **Actions → Publish review preview to GitHub Pages (manual only) → Run workflow**. Choose `feature/complete-approved-redesign` as the branch.
+3. Review the Pages deployment result and preview at `https://jblz1837.github.io/pitotshield/`.
+4. If deployment doesn't appear, check Actions permissions and Pages environment approvals.
+
+### Before moving the real domain
+
+1. Back up the old repository and document the existing Pages/DNS records.
+2. Verify the new site matches required existing production functionality. Current new site does **not** include the entire original media gallery, video library, newsletter state, theme switcher or locally hosted copies of documents.
+3. Configure EmailJS and GA4, verify lead delivery and live tracking, and test real downloads.
+4. Resolve any build errors and test mobile, desktop, and accessibility.
+5. Plan a short controlled cutover window. Remove `pitotshields.com` from the old GitHub Pages Settings first, then configure the new project for the apex custom domain, and only then adjust DNS as instructed by GitHub. Never point DNS to an unverified new build.
+6. Set the static export build base path to the empty root path for production, update robots/metadata appropriately, run a fresh deployment with a **separate approved production workflow**, verify HTTPS, forms, videos, documents and redirects, then retire the old deployment.
+7. Roll back by reassigning the domain to the original Pages project and restoring the original DNS if checks fail.
+
+**Important:** The repository's current GitHub Pages workflow is preview-only, not a production-domain deployment action. GitHub Pages is the hosting provider, but full connection to the existing custom domain is pending account-level settings and an approved cutover.
