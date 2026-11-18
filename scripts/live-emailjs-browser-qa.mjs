@@ -27,11 +27,11 @@ try {
  await page.getByRole("textbox",{name:"Company"}).fill("DeGroff Aviation Technologies - QA Test");
  await page.getByRole("textbox",{name:"Aircraft / fleet"}).fill("TEST - no aircraft");
  await page.getByRole("textbox",{name:"Additional details"}).fill("DEGROFF-BROWSER-QA-20261118: one test inquiry, not a customer lead. Please disregard.");
+ const responsePromise=page.waitForResponse(response=>response.url().includes("api.emailjs.com/api/v1.0/email/send") && response.request().method()==="POST",{timeout:20000}).catch(error=>{networkLog.push("RESPONSE WAIT FAILED "+String(error).slice(0,300));return null});
  await btn.click();
- await Promise.race([
-  page.getByRole("status").waitFor({timeout:18000}),
-  page.getByRole("alert").waitFor({timeout:18000})
- ]);
+ const emailResponse=await responsePromise;
+ if(emailResponse){responseStatus=emailResponse.status(); responseBody=(await emailResponse.text().catch(()=>"")).slice(0,300);}
+ await page.waitForTimeout(600);
  const status=await page.getByRole("status").count()>0 ? await page.getByRole("status").innerText() : "";
  const alert=await page.getByRole("alert").count()>0 ? await page.getByRole("alert").innerText() : "";
  console.log(JSON.stringify({test:"live-browser-emailjs",requestCount,responseStatus,responseBody,status,alert,networkLog}));
