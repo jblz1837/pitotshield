@@ -32,8 +32,8 @@ try {
  const emailResponse=await responsePromise;
  if(emailResponse){responseStatus=emailResponse.status(); responseBody=(await emailResponse.text().catch(()=>"")).slice(0,300);}
  await page.waitForTimeout(600);
- const status=await page.getByRole("status").count()>0 ? await page.getByRole("status").innerText() : "";
- const alert=await page.getByRole("alert").count()>0 ? await page.getByRole("alert").innerText() : "";
+ const status=await page.getByRole("status").count()>0 ? await page.getByRole("status").first().innerText() : "";
+ const alert=await page.getByRole("alert").count()>0 ? await page.getByRole("alert").first().innerText() : "";
  console.log(JSON.stringify({test:"live-browser-emailjs",requestCount,responseStatus,responseBody,status,alert,networkLog}));
  if(responseStatus!==200 || !status.includes("submitted successfully"))process.exitCode=1;
 } catch (error) {
