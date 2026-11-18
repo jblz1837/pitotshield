@@ -1,0 +1,57 @@
+name: Verify EmailJS live configuration and send one labeled QA inquiry
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/emailjs-test-trigger.txt"
+permissions:
+  contents: read
+jobs:
+  emailjs-test:
+    runs-on: ubuntu-latest
+    env:
+      EMAILJS_SERVICE: ${{ vars.PITOTSHIELD_EMAILJS_SERVICE_ID }}
+      EMAILJS_TEMPLATE: ${{ vars.PITOTSHIELD_EMAILJS_TEMPLATE_ID }}
+      EMAILJS_PUBLIC: ${{ vars.PITOTSHIELD_EMAILJS_PUBLIC_KEY }}
+    steps:
+      - name: Check presence of all three EmailJS identifiers without exposing values
+        id: config
+        shell: bash
+        run: |
+          if [ -z "$EMAILJS_SERVICE" ] || [ -z "$EMAILJS_TEMPLATE" ] || [ -z "$EMAILJS_PUBLIC" ]; then
+            echo "EmailJS incomplete: define all three PITOTSHIELD_EMAILJS_* Actions repository variables in GitHub Settings."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "EmailJS service, template and public key are all provided."
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Send one clearly identified real contact-form test
+        if: steps.config.outputs.ready == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error
+          payload={
+            "service_id":os.environ["EMAILJS_SERVICE"],
+            "template_id":os.environ["EMAILJS_TEMPLATE"],
+            "user_id":os.environ["EMAILJS_PUBLIC"],
+            "template_params":{
+              "from_name":"DeGroff Website QA Test",
+              "from_email":"jrussell@degroffaviation.com",
+              "reply_to":"jrussell@degroffaviation.com",
+              "company":"DeGroff Aviation Technologies QA",
+              "aircraft":"TEST ONLY",
+              "interest":"TEST ONLY - Website Contact Form Verification",
+              "message":"DEGROFF-WEBSITE-QA-20261118. This is a single test of the new website contact form integration. No sales inquiry; please disregard. Verify this arrived at the expected inbox and Reply-To is correct."
+            }
+          }
+          request=urllib.request.Request("https://api.emailjs.com/api/v1.0/email/send",data=json.dumps(payload).encode("utf-8"),headers={"Content-Type":"application/json"},method="POST")
+          try:
+            with urllib.request.urlopen(request,timeout=25) as response:
+              data=response.read().decode("utf-8",errors="replace")
+              print("EmailJS accepted test request; HTTP status:",response.status,"response:",data[:200])
+          except urllib.error.HTTPError as exc:
+            print("EmailJS rejected test request; HTTP status:",exc.code)
+            raise SystemExit(1)
+          PY
