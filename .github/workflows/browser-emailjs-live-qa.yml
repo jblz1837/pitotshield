@@ -1,0 +1,57 @@
+name: Browser-based live EmailJS inquiry QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/browser-emailjs-test-trigger.txt"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-emailjs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout approved redesign
+        uses: actions/checkout@v4
+        with:
+          ref: feature/complete-approved-redesign
+          path: site
+      - name: Checkout browser QA runner from main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: |
+            scripts/live-emailjs-browser-qa.mjs
+          path: tests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install site dependencies and Chromium
+        run: |
+          cd site
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Build isolated static preview with actual public EmailJS identifiers
+        working-directory: site
+        env:
+          NEXT_PUBLIC_BASE_PATH: /pitotshield
+          NEXT_PUBLIC_ASSET_PREFIX: /pitotshield
+          NEXT_PUBLIC_SITE_URL: https://jblz1837.github.io/pitotshield
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ""
+          NEXT_PUBLIC_EMAILJS_SERVICE_ID: service_dw49i0o
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_ifsa9jp
+          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: PJp-Gm6ZhIgKkvlLu
+        run: npm run build
+      - name: Serve static site
+        run: |
+          mkdir -p site/preview-root/pitotshield
+          cp -a site/out/. site/preview-root/pitotshield/
+          python3 -m http.server 4173 --directory site/preview-root > /tmp/qa-browser.log 2>&1 &
+          for i in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:4173/pitotshield/ >/dev/null && exit 0
+            sleep 1
+          done
+          exit 1
+      - name: Submit exactly one real browser inquiry and report API response
+        working-directory: site
+        run: cp ../tests/scripts/live-emailjs-browser-qa.mjs scripts/live-emailjs-browser-qa.mjs && node scripts/live-emailjs-browser-qa.mjs
