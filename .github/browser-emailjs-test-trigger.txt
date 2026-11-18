@@ -1,1 +1,1 @@
-2026-11-18: User provided corrected EmailJS public key 9aF0aO99oDFlU0X9H. Test one inquiry from isolated browser build with matching template and service; no production changes.
+2026-11-18: Verify whether fixed template_params.to_email recipient resolves EmailJS 422 in isolated browser form. One QA inquiry; production domain unchanged.
