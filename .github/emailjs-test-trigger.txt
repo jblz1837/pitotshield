@@ -1,1 +1,1 @@
-Run single real EmailJS delivery test after owner confirmed the three configured GitHub Actions repository variables, November 18 2026. No changes to production domain.
+Recheck EmailJS configuration using Variables OR Secrets with per-setting presence feedback after owner confirmed setup (2026-11-18). Single test message only if complete.
