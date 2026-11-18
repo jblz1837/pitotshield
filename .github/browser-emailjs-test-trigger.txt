@@ -1,1 +1,1 @@
-2026-11-18: Verify whether fixed template_params.to_email recipient resolves EmailJS 422 in isolated browser form. One QA inquiry; production domain unchanged.
+2026-11-18: User confirmed EmailJS template recipient jrussell@degroffaviation.com has been saved. Run a single labeled real-browser QA inquiry to verify email acceptance and receipt; production unchanged.
