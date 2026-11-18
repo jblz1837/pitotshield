@@ -1,1 +1,1 @@
-Run a single real EmailJS contact-form QA test if the three public EmailJS repository variables are configured. Do not touch live domain.
+Run single real EmailJS delivery test after owner confirmed the three configured GitHub Actions repository variables, November 18 2026. No changes to production domain.
