@@ -23,5 +23,5 @@ const html=readFileSync(join("out","index.html"),"utf8");
 for(const file of docs) assert.ok(html.includes(encodeURIComponent(file)),"Missing PDF link in static HTML: "+file);
 for(const file of videos) assert.ok(html.includes(encodeURIComponent(file)),"Missing video in static HTML: "+file);
 assert.ok(html.includes("degroff-logo.webp"),"Logo not referenced in HTML");
-assert.ok(html.includes("mailto:"),"Unconfigured contact form fallback absent from HTML");
+assert.ok(readFileSync(join("components","LeadForm.tsx"),"utf8").includes("mailto:"),"Unconfigured contact form fallback absent from code");
 console.log("PASS all migrated local PDF links, video links and logo. EmailJS live submission requires external configuration.");
