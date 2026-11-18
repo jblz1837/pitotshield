@@ -1,1 +1,1 @@
-Approved redesign preview build trigger. This file is only used to run the Pages preview workflow on main; workflow checks out feature/complete-approved-redesign.
+Preview refresh: header logo asset fix from feature/complete-approved-redesign (WebP direct image instead of SVG wrapper). Keep production domain untouched.
