@@ -4,6 +4,12 @@ const page = await browser.newPage();
 let responseStatus = null;
 let responseBody = "";
 let requestCount = 0;
+const networkLog=[];
+page.on("request",request=>{if(request.url().includes("emailjs.com"))networkLog.push("REQUEST "+request.method()+" "+request.url())});
+page.on("requestfailed",request=>{if(request.url().includes("emailjs.com"))networkLog.push("FAILED "+request.method()+" "+String(request.failure()?.errorText))});
+page.on("response",response=>{if(response.url().includes("emailjs.com"))networkLog.push("RESPONSE "+response.request().method()+" "+response.status())});
+page.on("console",m=>{if(m.type()==="error")networkLog.push("CONSOLE ERROR "+m.text().slice(0,300))});
+page.on("pageerror",err=>networkLog.push("PAGE ERROR "+err.message.slice(0,300)));
 page.on("response", async response => {
  if(response.url().includes("api.emailjs.com/api/v1.0/email/send") && response.request().method()==="POST"){
    responseStatus=response.status();
@@ -28,9 +34,9 @@ try {
  ]);
  const status=await page.getByRole("status").count()>0 ? await page.getByRole("status").innerText() : "";
  const alert=await page.getByRole("alert").count()>0 ? await page.getByRole("alert").innerText() : "";
- console.log(JSON.stringify({test:"live-browser-emailjs",requestCount,responseStatus,responseBody,status,alert}));
+ console.log(JSON.stringify({test:"live-browser-emailjs",requestCount,responseStatus,responseBody,status,alert,networkLog}));
  if(responseStatus!==200 || !status.includes("submitted successfully"))process.exitCode=1;
 } catch (error) {
- console.error("Live browser test failed:",String(error),JSON.stringify({requestCount,responseStatus,responseBody}));
+ console.error("Live browser test failed:",String(error),JSON.stringify({requestCount,responseStatus,responseBody,networkLog}));
  process.exitCode=1;
 } finally {await browser.close()}
