@@ -11,21 +11,23 @@ jobs:
   emailjs-test:
     runs-on: ubuntu-latest
     env:
-      EMAILJS_SERVICE: ${{ vars.PITOTSHIELD_EMAILJS_SERVICE_ID }}
-      EMAILJS_TEMPLATE: ${{ vars.PITOTSHIELD_EMAILJS_TEMPLATE_ID }}
-      EMAILJS_PUBLIC: ${{ vars.PITOTSHIELD_EMAILJS_PUBLIC_KEY }}
+      EMAILJS_SERVICE: ${{ vars.PITOTSHIELD_EMAILJS_SERVICE_ID || secrets.PITOTSHIELD_EMAILJS_SERVICE_ID }}
+      EMAILJS_TEMPLATE: ${{ vars.PITOTSHIELD_EMAILJS_TEMPLATE_ID || secrets.PITOTSHIELD_EMAILJS_TEMPLATE_ID }}
+      EMAILJS_PUBLIC: ${{ vars.PITOTSHIELD_EMAILJS_PUBLIC_KEY || secrets.PITOTSHIELD_EMAILJS_PUBLIC_KEY }}
     steps:
       - name: Check presence of all three EmailJS identifiers without exposing values
         id: config
         shell: bash
         run: |
-          if [ -z "$EMAILJS_SERVICE" ] || [ -z "$EMAILJS_TEMPLATE" ] || [ -z "$EMAILJS_PUBLIC" ]; then
-            echo "EmailJS incomplete: define all three PITOTSHIELD_EMAILJS_* Actions repository variables in GitHub Settings."
-            echo "ready=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "EmailJS service, template and public key are all provided."
-            echo "ready=true" >> "$GITHUB_OUTPUT"
+          missing=0
+          if [ -z "$EMAILJS_SERVICE" ]; then echo "MISSING: PITOTSHIELD_EMAILJS_SERVICE_ID"; missing=1; else echo "FOUND: PITOTSHIELD_EMAILJS_SERVICE_ID"; fi
+          if [ -z "$EMAILJS_TEMPLATE" ]; then echo "MISSING: PITOTSHIELD_EMAILJS_TEMPLATE_ID"; missing=1; else echo "FOUND: PITOTSHIELD_EMAILJS_TEMPLATE_ID"; fi
+          if [ -z "$EMAILJS_PUBLIC" ]; then echo "MISSING: PITOTSHIELD_EMAILJS_PUBLIC_KEY"; missing=1; else echo "FOUND: PITOTSHIELD_EMAILJS_PUBLIC_KEY"; fi
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::EmailJS configuration missing. Save variables or secrets under this repository's Actions settings."
+            exit 1
           fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
       - name: Send one clearly identified real contact-form test
         if: steps.config.outputs.ready == 'true'
         shell: bash
