@@ -10,7 +10,7 @@ export function PitotShieldsHome() {
   return <div className="min-h-screen bg-white text-slate-900">
     <header className="sticky top-0 z-20 border-b border-white/15 bg-[#081d30] text-white">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 lg:px-10">
-        <a href="#" aria-label="DeGroff Aviation Technologies homepage" className="flex items-center"><img src="/brand/degroff-logo.svg" alt="DeGroff Aviation Technologies official logo" className="h-16 w-auto max-w-[220px] object-contain" /></a>
+        <a href="#" aria-label="DeGroff Aviation Technologies homepage" className="flex items-center"><img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/degroff-logo.svg`} alt="DeGroff Aviation Technologies official logo" className="h-16 w-auto max-w-[220px] object-contain" /></a>
         <nav className="flex flex-wrap gap-5 text-sm font-semibold" aria-label="Main navigation">
           <a href="#how">Technology</a><a href="#applications">Applications</a><a href="#roi">ROI</a><a href="#demo">Demonstration</a><a href="#contact">Contact</a>
         </nav>
