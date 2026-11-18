@@ -1,1 +1,1 @@
-2026-11-18: Run one browser-based test of real EmailJS delivery against isolated static preview. Do not change live production site.
+2026-11-18: Diagnose EmailJS browser network preflight and browser errors; run one conditional test. Prior browser pass observed zero POSTs.
