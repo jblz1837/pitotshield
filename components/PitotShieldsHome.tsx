@@ -30,17 +30,22 @@ export function PitotShieldsHome() {
             <p className="mt-10 max-w-2xl text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
           </div>
           <figure className="mx-auto w-full max-w-[540px]">
-            <div className="overflow-hidden rounded-2xl border border-white/20 bg-slate-800 shadow-2xl">
-              <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/img_1438-scaled.jpg`}
-                alt="Two white PitotShield V2 SmartCovers installed on aircraft pitot probes with orange REMOVE BEFORE FLIGHT streamers"
-                width={1536}
-                height={2048}
-                fetchPriority="high"
-                className="block h-auto max-h-[690px] w-full object-contain"
-              />
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-slate-900 shadow-2xl">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                preload="metadata"
+                aria-label="PitotShield V2 SmartCovers optimized featured product demonstration"
+                className="mx-auto block h-[480px] w-full bg-slate-950 object-contain sm:h-[590px]"
+              >
+                <source src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/PitotShieldV2.mp4`} type="video/mp4" />
+                Your browser cannot play the demonstration video.
+              </video>
             </div>
-            <figcaption className="mt-3 text-center text-xs text-slate-300">PitotShield V2™ SmartCovers™ installed on aircraft pitot probes</figcaption>
+            <figcaption className="mt-3 text-center text-xs text-slate-300">See PitotShield V2™ SmartCovers™ in action — optimized product video</figcaption>
           </figure>
         </div>
       </section>
