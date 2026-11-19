@@ -20,10 +20,10 @@ export default function AutoHideHeader() {
     <header className={`sticky top-0 z-20 border-b border-white/10 bg-[#081d30]/95 text-white shadow-sm backdrop-blur-md motion-safe:transition-transform motion-safe:duration-300 ${hidden ? "-translate-y-full" : "translate-y-0"}`} onFocusCapture={() => setHidden(false)}>
       <svg aria-hidden="true" className="pointer-events-none absolute h-0 w-0 overflow-hidden" focusable="false">
         <defs>
-          <filter id="degroff-white-knockout" colorInterpolationFilters="sRGB">
+          <filter id="degroff-white-knockout" colorInterpolationFilters="sRGB" x="-5%" y="-5%" width="110%" height="110%">
             <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -0.2126 -0.7152 -0.0722 0 1" />
             <feComponentTransfer>
-              <feFuncA type="gamma" amplitude="1" exponent="2.3" offset="0" />
+              <feFuncA type="gamma" amplitude="1" exponent="4.5" offset="0" />
             </feComponentTransfer>
           </filter>
         </defs>
