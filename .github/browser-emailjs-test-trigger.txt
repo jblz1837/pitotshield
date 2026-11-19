@@ -1,1 +1,1 @@
-2026-11-18: User confirmed Outlook has been reconnected inside EmailJS. Send one QA-only browser contact-form inquiry using approved redesign and verify the API delivery response; production domain remains unchanged.
+2026-11-19: One final QA browser inquiry with dedicated template_gi9vc8l. Verify business email includes actual request details. No live production changes.
