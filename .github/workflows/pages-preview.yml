@@ -1,4 +1,4 @@
-name: Publish APPROVED preview — select MAIN to run
+name: Validate approved preview (build only; never deploy to production Pages)
 
 on:
   workflow_dispatch:
@@ -9,40 +9,20 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pitotshield-review-pages
-  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Require main dispatch for GitHub Pages environment
-        run: |
-          if [ "${{ github.ref_name }}" != "main" ]; then
-            echo "Run this workflow from main. It explicitly checks out the approved redesign branch." >&2
-            exit 1
-          fi
       - uses: actions/checkout@v4
         with:
           ref: feature/complete-approved-redesign
-      - name: Confirm approved redesign checkout
-        run: |
-          test "$(git branch --show-current)" = "feature/complete-approved-redesign"
-          echo "Building approved branch: $(git rev-parse HEAD)"
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
       - name: Install dependencies
         run: npm install --no-audit --no-fund
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
-      - name: Build static preview
+      - name: Build preview-only artifact
         env:
           NEXT_PUBLIC_BASE_PATH: /pitotshield
           NEXT_PUBLIC_ASSET_PREFIX: /pitotshield
@@ -52,19 +32,11 @@ jobs:
           NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_gi9vc8l
           NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: 9aF0aO99oDFlU0X9H
         run: npm run build
-      - name: Verify documents, videos and published links
+      - name: Verify preview files
         run: npm run test:assets
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Keep preview package as a workflow artifact only (do not deploy)
+        uses: actions/upload-artifact@v4
         with:
+          name: approved-preview-build-only
           path: out
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy preview
-        id: deployment
-        uses: actions/deploy-pages@v4
+          retention-days: 7
