@@ -39,7 +39,7 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://jblz1837.github.io/pitotshield
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ""
           NEXT_PUBLIC_EMAILJS_SERVICE_ID: service_dw49i0o
-          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_ifsa9jp
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_gi9vc8l
           NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: 9aF0aO99oDFlU0X9H
         run: npm run build
       - name: Serve static site
