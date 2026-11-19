@@ -28,11 +28,11 @@ export default function AutoHideHeader() {
           </filter>
         </defs>
       </svg>
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-2 sm:flex-row sm:gap-5 sm:py-2 lg:gap-8 lg:px-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-2 sm:flex-row sm:gap-4 sm:py-2 lg:gap-8 lg:px-10">
         <a href="#" aria-label="DeGroff Aviation Technologies homepage" className="inline-flex w-fit shrink-0 items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300">
-          <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/degroff-logo.webp`} alt="DeGroff Aviation Technologies™ official logo" width={230} height={178} className="h-16 w-auto max-w-full object-contain sm:h-24 lg:h-28" style={{ filter: "url(#degroff-white-knockout)" }} />
+          <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/degroff-logo.webp`} alt="DeGroff Aviation Technologies™ official logo" width={230} height={178} className="h-24 w-auto max-w-full object-contain drop-shadow-[0_1px_2px_rgba(255,255,255,0.18)] sm:h-32 lg:h-44" style={{ filter: "url(#degroff-white-knockout)" }} />
         </a>
-        <nav className="flex w-full flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-semibold tracking-wide sm:w-auto sm:justify-end sm:gap-x-5 sm:text-sm lg:gap-x-6 lg:text-base" aria-label="Main navigation">
+        <nav className="flex w-full min-w-0 flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-semibold tracking-wide sm:w-auto sm:flex-1 sm:justify-end sm:gap-x-4 sm:text-sm lg:gap-x-6 lg:text-base" aria-label="Main navigation">
           <a href="#how">Technology</a><a href="#applications">Applications</a><a href="#roi">ROI</a><a href="#demo">Demonstration</a><a href="#contact">Contact</a>
         </nav>
       </div>
