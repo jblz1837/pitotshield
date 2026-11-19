@@ -35,7 +35,7 @@ export function PitotShieldsHome() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3"><a className="rounded-lg bg-amber-300 px-5 py-3.5 text-center text-sm font-bold sm:px-6 sm:py-4 sm:text-base text-slate-900 shadow-lg shadow-amber-400/15 transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200" href="#contact">Request a Live Demo</a><a className="rounded-lg border border-white/50 bg-white/10 px-5 py-3.5 text-center text-sm font-bold sm:px-6 sm:py-4 sm:text-base backdrop-blur-sm transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#demo">Watch Auto-Release Demo</a></div>
             <p className="mt-6 max-w-[58ch] text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
           </div>
-          <figure className="mx-auto w-full min-w-0 max-w-[370px] sm:max-w-[430px] lg:max-w-[450px] xl:max-w-[475px]">
+          <figure className="mx-auto w-full min-w-0 max-w-[310px] sm:max-w-[355px] lg:max-w-[380px] xl:max-w-[400px]">
             <div className="overflow-hidden rounded-2xl border border-white/20 bg-[#0c293f] shadow-[0_18px_55px_rgba(0,0,0,.28)] ring-1 ring-white/10">
               <img
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/img_1438-scaled.jpg`}
@@ -43,7 +43,7 @@ export function PitotShieldsHome() {
                 width={1536}
                 height={2048}
                 fetchPriority="high"
-                className="mx-auto block h-auto max-h-[430px] w-full object-contain sm:max-h-[490px] lg:max-h-[530px]"
+                className="mx-auto block h-auto max-h-[365px] w-full object-contain sm:max-h-[410px] lg:max-h-[455px]"
               />
             </div>
             <figcaption className="mt-2 text-center text-xs leading-5 text-slate-300">PitotShield V2™ SmartCovers™ installed on aircraft pitot probes</figcaption>
