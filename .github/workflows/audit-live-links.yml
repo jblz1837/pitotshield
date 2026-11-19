@@ -1,0 +1,29 @@
+name: Audit live pitotshields.com links (read-only)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit-live-links.mjs"
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Crawl live homepage, check every local link, media and document
+        run: node scripts/audit-live-links.mjs
+      - name: Preserve link audit report (even on failures)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pitotshields-live-link-audit
+          path: |
+            live-link-audit.json
+            live-link-audit.md
+          if-no-files-found: warn
+          retention-days: 14
