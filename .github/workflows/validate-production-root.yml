@@ -1,0 +1,47 @@
+name: Validate production-root release candidate (no deployment)
+
+on:
+  push:
+    branches:
+      - release/pitotshields-production
+      - release/approved-launch-candidate-2026-11-19
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-audit --no-fund
+      - name: Type check
+        run: npm run typecheck
+      - name: Build for production apex domain (root paths)
+        env:
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_ASSET_PREFIX: ""
+          NEXT_PUBLIC_SITE_URL: https://pitotshields.com
+          NEXT_PUBLIC_EMAILJS_SERVICE_ID: service_dw49i0o
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_gi9vc8l
+          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: 9aF0aO99oDFlU0X9H
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: G-GH3FLHMFLH
+        run: npm run build
+      - name: Verify files and root relative assets
+        run: |
+          npm run test:assets
+          test -f out/assets/PitotShieldV2_v.mp4
+          test -f out/docs/pitotshield-v2-manual.pdf
+          grep -q 'PitotShieldV2_v.mp4' out/index.html
+          grep -q 'https://pitotshields.com' out/index.html
+          ! grep -q '/pitotshield/assets/' out/index.html
+          ! grep -q 'noindex' out/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pitotshields-production-root-release-candidate
+          path: out
+          retention-days: 7
