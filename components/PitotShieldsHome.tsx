@@ -32,7 +32,7 @@ export function PitotShieldsHome() {
           <figure className="mx-auto w-full max-w-[540px]">
             <div className="overflow-hidden rounded-2xl border border-white/20 bg-slate-800 shadow-2xl">
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/pitotshield-aircraft-photo.jpg`}
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/img_1438-scaled.jpg`}
                 alt="Two white PitotShield V2 SmartCovers installed on aircraft pitot probes with orange REMOVE BEFORE FLIGHT streamers"
                 width={1536}
                 height={2048}
