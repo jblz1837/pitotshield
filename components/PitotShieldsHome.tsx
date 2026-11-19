@@ -10,9 +10,11 @@ import VideoGallery from "./VideoGallery";
 export function PitotShieldsHome() {
   return <div className="min-h-screen bg-white text-slate-900">
     <header className="sticky top-0 z-20 border-b border-white/10 bg-[#081d30]/95 text-white shadow-lg shadow-[#061625]/10 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5 lg:px-10">
-        <a href="#" aria-label="DeGroff Aviation Technologies homepage" className="flex items-center"><img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/degroff-logo.webp`} alt="DeGroff Aviation Technologies official logo" className="h-16 w-auto max-w-[220px] object-contain" /></a>
-        <nav className="flex flex-wrap items-center gap-5 text-sm font-semibold tracking-wide" aria-label="Main navigation">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6 lg:px-10">
+        <a href="#" aria-label="DeGroff Aviation Technologies homepage" className="group inline-flex w-fit shrink-0 items-center rounded-xl border border-white/15 bg-white/[0.07] px-4 py-2 shadow-[0_4px_24px_rgba(0,0,0,0.18)] transition-colors hover:bg-white/[0.12] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300">
+          <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/degroff-logo.webp`} alt="DeGroff Aviation Technologies™ official logo" width={230} height={178} className="h-[84px] w-auto object-contain sm:h-[96px] lg:h-[108px]" />
+        </a>
+        <nav className="flex flex-wrap items-center gap-x-5 gap-y-3 text-sm font-semibold tracking-wide sm:justify-end" aria-label="Main navigation">
           <a href="#how">Technology</a><a href="#applications">Applications</a><a href="#roi">ROI</a><a href="#demo">Demonstration</a><a href="#contact">Contact</a>
         </nav>
       </div>
