@@ -1,1 +1,1 @@
-2026-11-19: Publish refined homepage with subtle aviation blueprint watermark, red product heading, approved original aircraft photograph, improved cards and buttons. Review preview only; production unchanged.
+2026-11-19: Publish improved DeGroff official logo display in responsive header, 84–108px tall, high contrast backdrop and navigation spacing. Preview only; production domain unchanged.
