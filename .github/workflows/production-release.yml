@@ -1,0 +1,69 @@
+name: Launch pitotshields.com production (manual only)
+on:
+  workflow_dispatch:
+    inputs:
+      launch_confirmation:
+        description: 'Type LAUNCH_PITOTSHIELDS_COM after the old repository releases the custom domain and new Pages settings own it'
+        required: true
+        type: string
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pitotshields-production-launch
+  cancel-in-progress: false
+jobs:
+  production-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require explicit production launch acknowledgement
+        env:
+          CONFIRMATION: ${{ inputs.launch_confirmation }}
+        run: |
+          test "$CONFIRMATION" = 'LAUNCH_PITOTSHIELDS_COM' || { echo 'Production launch not confirmed' >&2; exit 1; }
+      - name: Checkout validated production release branch
+        uses: actions/checkout@v4
+        with:
+          ref: release/pitotshields-production
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --no-audit --no-fund
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: next
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Build production root site with verified EmailJS and GA4 identifiers
+        env:
+          NEXT_PUBLIC_BASE_PATH: ''
+          NEXT_PUBLIC_ASSET_PREFIX: ''
+          NEXT_PUBLIC_SITE_URL: https://pitotshields.com
+          NEXT_PUBLIC_EMAILJS_SERVICE_ID: service_dw49i0o
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_gi9vc8l
+          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: 9aF0aO99oDFlU0X9H
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: G-GH3FLHMFLH
+        run: npm run build
+      - name: Production preflight
+        run: |
+          npm run test:assets
+          test -f out/assets/PitotShieldV2.mp4
+          test -f out/docs/pitotshield-v2-manual.pdf
+          grep -q 'https://pitotshields.com' out/index.html
+          ! grep -q '/pitotshield/assets/' out/index.html
+          ! grep -q 'noindex' out/index.html
+      - name: Upload production GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+  production-deploy:
+    needs: production-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://pitotshields.com
+    steps:
+      - name: Deploy production site
+        uses: actions/deploy-pages@v4
