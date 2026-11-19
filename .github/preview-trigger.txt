@@ -1,1 +1,1 @@
-2026-11-19: User clarified homepage hero must show optimized aircraft PHOTO, not video. Restore img_1438-scaled.jpg. Deploy review-only preview, leave production unchanged.
+2026-11-19: Republish approved review homepage with PitotShield V2™ SmartCovers™ hero heading changed from amber to red. No production domain change.
