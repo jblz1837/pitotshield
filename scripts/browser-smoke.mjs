@@ -24,7 +24,7 @@ try{
  assert.ok(await logo.count(),"Header logo missing");
  const imageLoaded=await logo.evaluate(img=>img.complete && img.naturalWidth>0);
  assert.ok(imageLoaded,"Header logo did not render");
- assert.equal(await page.locator("video").count(),8,"Wrong number of videos");
+ assert.equal(await page.locator("video").count(),9,"Wrong number of videos");
  assert.equal(await page.locator('a[href$=".pdf"]').count(),5,"Only the five substantive PDF links should display");
  for (const element of await page.locator('a[href$=".pdf"]').all()){
   const url=await element.getAttribute("href");
@@ -43,5 +43,5 @@ try{
  await page.getByRole("status").getByText("Your inquiry was submitted successfully.").waitFor({timeout:12000});
  assert.equal(intercepted,1,"One mocked EmailJS request expected");
  await page.waitForFunction(()=>window.dataLayer?.some?.(x=>x?.[0]==="event" && x?.[1]==="generate_lead"),null,{timeout:8000});
- console.log("PASS browser: logo, 8 videos, 5 PDF download links, mocked EmailJS lead and GA4 event");
+ console.log("PASS browser: logo, 9 videos, 5 PDF download links, mocked EmailJS lead and GA4 event");
 }finally{await browser.close()}
