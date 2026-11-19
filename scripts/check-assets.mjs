@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import {readFileSync,statSync} from "node:fs";
 import {join} from "node:path";
 const docs=["pitotshield-v2-catalog-05-25.pdf","pitotshield-v2-catalog.pdf","pitotshield-v2-installation-guide.pdf","pitotshield-v2-manual.pdf","pitotshield-v2-safety-compliance.pdf","pitotshield-v2-spec-sheet.pdf","psv2-wp-marketing-version-w-all-econ.pdf"];
-const videos=["PitotShieldV2-Featured-Demo.mp4","psv2-demo.mp4","PSV2 Universal Fit Demo.mp4","PSV2 Return to Service Procedure Training Video.mp4","PitotShield v2 Aircraft Test Videos.mp4","PSV2 w_ Retaining Bridle Delta TOC Port.mp4","pitotshield_v2_realfootage_teaser_captioned_360 (1).mp4","IMG 1516   1080p.mp4"];
+const videos=["Boeing Demo Avelo Airlines - Q1 2024.mp4","psv2-demo.mp4","PSV2 Universal Fit Demo.mp4","PSV2 Return to Service Procedure Training Video.mp4","PitotShield v2 Aircraft Test Videos.mp4","PSV2 w_ Retaining Bridle Delta TOC Port.mp4","pitotshield_v2_realfootage_teaser_captioned_360 (1).mp4","IMG 1516   1080p.mp4"];
 const base="public";
 for (const file of docs) {
  const path=join(base,"docs",file), data=readFileSync(path);
