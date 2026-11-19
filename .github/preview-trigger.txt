@@ -5,3 +5,4 @@
 2026-11-19: Rebuild review preview with proportionally larger auto-hiding site header and logo; live site unchanged.
 2026-11-19: Rebuild preview with balanced responsive homepage hero, image, typography, sections and proportional header. Production unchanged.
 2026-11-19: Refit homepage hero with responsive product-image sizing, aligned text, and buttons; keep auto-hiding header, video gallery and live site unchanged.
+2026-11-19: Refine homepage visual proportions, hero image framing, typography and CTA spacing. Preserve videos, auto-hide header, and production site.
