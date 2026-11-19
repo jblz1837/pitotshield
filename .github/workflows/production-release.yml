@@ -49,10 +49,13 @@ jobs:
       - name: Production preflight
         run: |
           npm run test:assets
-          test -f out/assets/PitotShieldV2.mp4
+          test -f out/assets/PitotShieldV2_v.mp4
+          test -f out/assets/Boeing\ Demo\ Avelo\ Airlines\ -\ Q1\ 2024.mp4
           test -f out/docs/pitotshield-v2-manual.pdf
           grep -q 'https://pitotshields.com' out/index.html
-          ! grep -q '/pitotshield/assets/' out/index.html
+          ! grep -q '/pitotshield/' out/index.html
+          grep -q '/docs/pitotshield-v2-manual.pdf' out/index.html
+          grep -q '/assets/PitotShieldV2_v.mp4' out/index.html
           ! grep -q 'noindex' out/index.html
       - name: Upload production GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
