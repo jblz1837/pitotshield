@@ -1,1 +1,1 @@
-2026-11-19: Publish redesigned review homepage hero with existing optimized 25-second PitotShieldV2.mp4 instead of photo. Keep production domain unchanged.
+2026-11-19: User clarified homepage hero must show optimized aircraft PHOTO, not video. Restore img_1438-scaled.jpg. Deploy review-only preview, leave production unchanged.
