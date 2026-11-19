@@ -7,18 +7,10 @@ const applications = [
 import LeadForm from "./LeadForm";
 import TechnicalResources from "./TechnicalResources";
 import VideoGallery from "./VideoGallery";
+import AutoHideHeader from "./AutoHideHeader";
 export function PitotShieldsHome() {
   return <div className="min-h-screen bg-white text-slate-900">
-    <header className="sticky top-0 z-20 border-b border-white/10 bg-[#081d30]/95 text-white shadow-sm backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl flex-row items-center justify-between gap-3 px-4 py-1.5 sm:gap-5 lg:px-10">
-        <a href="#" aria-label="DeGroff Aviation Technologies homepage" className="group inline-flex w-fit shrink-0 items-center rounded-lg px-1 py-1 transition-colors hover:bg-white/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300">
-          <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/degroff-logo.webp`} alt="DeGroff Aviation Technologies™ official logo" width={230} height={178} className="h-10 w-auto object-contain sm:h-12 lg:h-14" />
-        </a>
-        <nav className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 text-xs font-semibold tracking-wide sm:gap-x-5 sm:text-sm" aria-label="Main navigation">
-          <a href="#how">Technology</a><a href="#applications">Applications</a><a href="#roi">ROI</a><a href="#demo">Demonstration</a><a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+    <AutoHideHeader />
     <main>
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#071a2a] via-[#103b59] to-[#071a2a] text-white">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
