@@ -20,13 +20,28 @@ export function PitotShieldsHome() {
     <main>
       <section className="relative overflow-hidden bg-gradient-to-br from-[#071a2a] via-[#103b59] to-[#071a2a] text-white">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage:"linear-gradient(#ffffff30 1px,transparent 1px),linear-gradient(90deg,#ffffff30 1px,transparent 1px)",backgroundSize:"36px 36px"}} />
-        <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-10 lg:py-32">
-          <p className="mb-5 text-sm font-bold uppercase tracking-[.25em] text-amber-300">Fail-Safe by Design</p>
-          <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight sm:text-7xl">Stop Covered Pitot Events <span className="text-amber-300">(COPEs).</span></h1>
-          <h2 className="mt-6 text-2xl font-bold text-amber-200 sm:text-3xl">PitotShield V2™ SmartCovers™</h2>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200">Stop burning pitot tube covers. Stop Covered Pitot Events (COPEs). Protect critical pitot probes and avoid costly maintenance interruptions with heat-activated release technology.</p>
-          <div className="mt-9 flex flex-wrap gap-4"><a className="rounded-lg bg-amber-300 px-6 py-4 font-bold text-slate-900" href="#contact">Request a Live Demo</a><a className="rounded-lg border border-white/60 px-6 py-4 font-bold" href="#demo">Watch Auto-Release Demo</a></div>
-          <p className="mt-10 max-w-3xl text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-12 lg:px-10 lg:py-24">
+          <div>
+            <p className="mb-5 text-sm font-bold uppercase tracking-[.25em] text-amber-300">Fail-Safe by Design</p>
+            <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl xl:text-6xl">Stop Covered Pitot Events <span className="text-amber-300">(COPEs).</span></h1>
+            <h2 className="mt-6 text-2xl font-bold text-amber-200 sm:text-3xl">PitotShield V2™ SmartCovers™</h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Protect critical pitot probes and help avoid costly maintenance interruptions with heat-activated release technology for aircraft production, maintenance, and operations.</p>
+            <div className="mt-9 flex flex-wrap gap-4"><a className="rounded-lg bg-amber-300 px-6 py-4 font-bold text-slate-900" href="#contact">Request a Live Demo</a><a className="rounded-lg border border-white/60 px-6 py-4 font-bold" href="#demo">Watch Auto-Release Demo</a></div>
+            <p className="mt-10 max-w-2xl text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
+          </div>
+          <figure className="mx-auto w-full max-w-[540px]">
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-slate-800 shadow-2xl">
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/pitotshield-aircraft-photo.jpg`}
+                alt="Two white PitotShield V2 SmartCovers installed on aircraft pitot probes with orange REMOVE BEFORE FLIGHT streamers"
+                width={1536}
+                height={2048}
+                fetchPriority="high"
+                className="block h-auto max-h-[690px] w-full object-contain"
+              />
+            </div>
+            <figcaption className="mt-3 text-center text-xs text-slate-300">PitotShield V2™ SmartCovers™ installed on aircraft pitot probes</figcaption>
+          </figure>
         </div>
       </section>
       <section id="how" className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
