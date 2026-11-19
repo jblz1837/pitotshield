@@ -1,1 +1,2 @@
 2026-11-19: Republish preview after removing the 'Small device. Big protection.' homepage heading; no changes to the live domain.
+2026-11-19: Rebuild GitHub Pages review preview with Install/Removal video PitotShieldV2_v.mp4; production site unchanged.
