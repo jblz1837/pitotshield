@@ -1,1 +1,1 @@
-2026-11-19: Finalized responsive homepage hero with exact user-uploaded aircraft photo img_1438-scaled.jpg; publish review preview only, leave production domain unchanged.
+2026-11-19: Publish redesigned review homepage hero with existing optimized 25-second PitotShieldV2.mp4 instead of photo. Keep production domain unchanged.
