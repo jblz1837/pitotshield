@@ -3,3 +3,4 @@
 2026-11-19: Rebuild preview after moving Install/Removal into small video grid and reducing sticky header size; preserve featured video and production site.
 2026-11-19: Rebuild preview for automatic hide-on-scroll header; production site unchanged.
 2026-11-19: Rebuild review preview with proportionally larger auto-hiding site header and logo; live site unchanged.
+2026-11-19: Rebuild preview with balanced responsive homepage hero, image, typography, sections and proportional header. Production unchanged.
