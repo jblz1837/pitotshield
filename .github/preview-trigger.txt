@@ -1,1 +1,1 @@
-2026-11-19: Publish improved DeGroff official logo display in responsive header, 84–108px tall, high contrast backdrop and navigation spacing. Preview only; production domain unchanged.
+2026-11-19: Republish preview after removing the 'Small device. Big protection.' homepage heading; no changes to the live domain.
