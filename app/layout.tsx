@@ -6,6 +6,7 @@ export const metadata: Metadata = {
  description: "Stop Covered Pitot Events (COPEs). Explore fail-safe heat-activated pitot cover technology for aircraft production, maintenance and operations.",
  metadataBase: new URL("https://pitotshields.com"),
  alternates: { canonical: "/" },
+ icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }] },
  robots: { index: true, follow: true },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en"><body className="antialiased">{children}<Analytics /></body></html>; }
