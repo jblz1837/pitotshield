@@ -1,1 +1,1 @@
-2026-11-19: User uploaded 2,275,001-byte PitotShieldV2.mp4 to approved redesign at public/assets; republish review-only GitHub Pages preview with featured portrait video and validate files. No production deployment.
+2026-11-19: Republish review site with uploaded 7.6MB Boeing Demo Avelo Airlines - Q1 2024.mp4 as Featured Product Video. Do not alter production domain.
