@@ -1,1 +1,1 @@
-2026-11-19: Publish review-only preview using dedicated inquiry template_gi9vc8l with verified EmailJS service and public key. No production DNS changes.
+2026-11-19: User uploaded 2,275,001-byte PitotShieldV2.mp4 to approved redesign at public/assets; republish review-only GitHub Pages preview with featured portrait video and validate files. No production deployment.
