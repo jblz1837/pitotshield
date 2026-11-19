@@ -18,8 +18,8 @@ export default function VideoGallery(){
    <h3 className="text-2xl font-bold">Install/Removal</h3>
    <article className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
     <video controls playsInline preload="metadata" className="aspect-video w-full bg-slate-950 object-contain" aria-label="PitotShield V2™ SmartCovers™ Install/Removal">
-     <source src={media("PitotShieldV2(5).mp4")} type="video/mp4"/>
-     Your browser cannot play this video. <a href={media("PitotShieldV2(5).mp4")}>Download the MP4 file.</a>
+     <source src={media("PitotShieldV2_v.mp4")} type="video/mp4"/>
+     Your browser cannot play this video. <a href={media("PitotShieldV2_v.mp4")}>Download the MP4 file.</a>
     </video>
     <div className="p-5"><p className="text-lg font-bold">PitotShield V2™ SmartCovers™ — Install/Removal</p></div>
    </article>
