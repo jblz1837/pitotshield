@@ -8,3 +8,4 @@
 2026-11-19: Refine homepage visual proportions, hero image framing, typography and CTA spacing. Preserve videos, auto-hide header, and production site.
 2026-11-19: Rebuild review preview after reducing homepage product photograph size for improved visual balance; production unchanged.
 2026-11-19: Rebuild preview after further proportional width/height reduction of homepage product photo; production unchanged.
+2026-11-19: Rebuild preview for minor 5-percent proportional reduction of homepage product photo; production unchanged.
