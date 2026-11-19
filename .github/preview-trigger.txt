@@ -1,1 +1,1 @@
-2026-11-18: Rebuild review-only Pages preview with newly confirmed EmailJS public key 9aF0aO99oDFlU0X9H; production domain unchanged.
+2026-11-19: Publish review-only preview using dedicated inquiry template_gi9vc8l with verified EmailJS service and public key. No production DNS changes.
