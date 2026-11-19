@@ -24,7 +24,7 @@ export function PitotShieldsHome() {
           <div>
             <p className="mb-5 text-sm font-bold uppercase tracking-[.25em] text-amber-300">Fail-Safe by Design</p>
             <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl xl:text-6xl">Stop Covered Pitot Events <span className="text-amber-300">(COPEs).</span></h1>
-            <h2 className="mt-6 text-2xl font-bold text-amber-200 sm:text-3xl">PitotShield V2™ SmartCovers™</h2>
+            <h2 className="mt-6 text-2xl font-bold text-red-500 sm:text-3xl">PitotShield V2™ SmartCovers™</h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Protect critical pitot probes and help avoid costly maintenance interruptions with heat-activated release technology for aircraft production, maintenance, and operations.</p>
             <div className="mt-9 flex flex-wrap gap-4"><a className="rounded-lg bg-amber-300 px-6 py-4 font-bold text-slate-900" href="#contact">Request a Live Demo</a><a className="rounded-lg border border-white/60 px-6 py-4 font-bold" href="#demo">Watch Auto-Release Demo</a></div>
             <p className="mt-10 max-w-2xl text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
