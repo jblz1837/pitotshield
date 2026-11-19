@@ -17,12 +17,16 @@ for (const file of videos){
  assert.equal(data.subarray(4,8).toString(),"ftyp","Invalid MP4 file header: "+file);
  console.log("PASS MP4",file,data.length);
 }
-const logo=join(base,"brand","degroff-logo.webp");
-assert.ok(statSync(logo).size>500,"Logo missing or empty");
+const originalLogo=join(base,"brand","degroff-logo.webp");
+assert.ok(statSync(originalLogo).size>500,"Original backup logo missing or empty");
+const headerLogo=join(base,"brand","degroff-header-white.svg");
+const headerLogoSvg=readFileSync(headerLogo,"utf8");
+assert.ok(headerLogoSvg.includes("<svg") && headerLogoSvg.includes("data:image/webp;base64,") && headerLogoSvg.includes("white-on-transparent"),"Header logo SVG missing or invalid");
 const html=readFileSync(join("out","index.html"),"utf8");
 for(const file of docs.filter(f=>!["pitotshield-v2-installation-guide.pdf","pitotshield-v2-safety-compliance.pdf"].includes(f))) assert.ok(html.includes(encodeURIComponent(file)),"Missing PDF link in static HTML: "+file);
 for(const file of ["pitotshield-v2-installation-guide.pdf","pitotshield-v2-safety-compliance.pdf"]) assert.ok(!html.includes(encodeURIComponent(file)),"Placeholder-only PDF must not be advertised: "+file);
 for(const file of videos) assert.ok(html.includes(encodeURIComponent(file)),"Missing video in static HTML: "+file);
-assert.ok(html.includes("degroff-logo.webp"),"Logo not referenced in HTML");
+assert.ok(html.includes("degroff-header-white.svg"),"Transparent header logo not referenced in HTML");
+assert.ok(statSync(join("out","brand","degroff-header-white.svg")).size>1000,"Header logo missing from exported site");
 assert.ok(readFileSync(join("components","LeadForm.tsx"),"utf8").includes("mailto:"),"Unconfigured contact form fallback absent from code");
 console.log("PASS all migrated local PDF links, video links and logo. EmailJS live submission requires external configuration.");
