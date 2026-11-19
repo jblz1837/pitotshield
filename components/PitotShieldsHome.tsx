@@ -26,16 +26,16 @@ export function PitotShieldsHome() {
           </svg>
           <div className="absolute inset-0 bg-gradient-to-r from-[#071a2a]/70 via-transparent to-[#071a2a]/20" />
         </div>
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14 lg:px-10 lg:py-28">
-          <div>
-            <p className="mb-5 text-sm font-bold uppercase tracking-[.25em] text-amber-300">Fail-Safe by Design</p>
-            <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl xl:text-6xl">Stop Covered Pitot Events <span className="text-amber-300">(COPEs).</span></h1>
-            <h2 className="mt-6 text-2xl font-extrabold tracking-tight text-red-400 sm:text-3xl">PitotShield V2™ SmartCovers™</h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Protect critical pitot probes and help avoid costly maintenance interruptions with heat-activated release technology for aircraft production, maintenance, and operations.</p>
-            <div className="mt-9 flex flex-wrap gap-4"><a className="rounded-lg bg-amber-300 px-6 py-4 font-bold text-slate-900 shadow-lg shadow-amber-400/15 transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200" href="#contact">Request a Live Demo</a><a className="rounded-lg border border-white/50 bg-white/10 px-6 py-4 font-bold backdrop-blur-sm transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#demo">Watch Auto-Release Demo</a></div>
-            <p className="mt-10 max-w-2xl text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-9 px-5 py-12 sm:px-8 sm:py-16 lg:min-h-[min(760px,calc(100svh-140px))] lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-12 lg:px-10 lg:py-16 xl:gap-16">
+          <div className="min-w-0 max-w-2xl">
+            <p className="mb-4 text-sm font-bold uppercase tracking-[.25em] text-amber-300">Fail-Safe by Design</p>
+            <h1 className="text-[clamp(2.15rem,4.1vw,3.75rem)] font-black leading-[1.12] tracking-tight">Stop Covered Pitot Events <span className="text-amber-300">(COPEs).</span></h1>
+            <h2 className="mt-5 text-xl font-extrabold tracking-tight text-red-400 sm:text-2xl xl:text-3xl">PitotShield V2™ SmartCovers™</h2>
+            <p className="mt-5 max-w-xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">Protect critical pitot probes and help avoid costly maintenance interruptions with heat-activated release technology for aircraft production, maintenance, and operations.</p>
+            <div className="mt-7 flex flex-wrap gap-3 sm:gap-4"><a className="rounded-lg bg-amber-300 px-5 py-3.5 text-sm font-bold sm:px-6 sm:py-4 sm:text-base text-slate-900 shadow-lg shadow-amber-400/15 transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200" href="#contact">Request a Live Demo</a><a className="rounded-lg border border-white/50 bg-white/10 px-5 py-3.5 text-sm font-bold sm:px-6 sm:py-4 sm:text-base backdrop-blur-sm transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" href="#demo">Watch Auto-Release Demo</a></div>
+            <p className="mt-7 max-w-xl text-xs leading-5 text-slate-300">Always follow approved aircraft procedures and remove covers before operation. Auto-release is an additional safeguard, not a substitute for required removal checks.</p>
           </div>
-          <figure className="mx-auto w-full max-w-[540px]">
+          <figure className="mx-auto w-full min-w-0 max-w-[480px] lg:max-w-[510px]">
             <div className="overflow-hidden rounded-2xl border border-white/25 bg-slate-800 shadow-[0_25px_75px_rgba(0,0,0,.4)] ring-1 ring-white/10">
               <img
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/img_1438-scaled.jpg`}
@@ -43,14 +43,14 @@ export function PitotShieldsHome() {
                 width={1536}
                 height={2048}
                 fetchPriority="high"
-                className="block h-auto max-h-[690px] w-full object-contain"
+                className="block h-auto max-h-[520px] w-full object-contain lg:max-h-[590px]"
               />
             </div>
             <figcaption className="mt-3 text-center text-xs text-slate-300">PitotShield V2™ SmartCovers™ installed on aircraft pitot probes</figcaption>
           </figure>
         </div>
       </section>
-      <section id="how" className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
+      <section id="how" className="mx-auto max-w-7xl px-5 py-14 sm:py-16 lg:px-10 lg:py-20">
         <p className="text-xs font-black uppercase tracking-[.2em] text-sky-800">How it works</p>
         <p className="mt-5 max-w-3xl text-lg text-slate-600">PitotShield V2™ SmartCovers™ are designed to disengage approximately 2–5 minutes after pitot heat activation under specified operating conditions.</p>
         <div className="mt-8 grid gap-5 md:grid-cols-3">{[
@@ -59,10 +59,10 @@ export function PitotShieldsHome() {
           ["03", "Real-world aviation design", "Designed by Pilots for Pilots. Developed for production, maintenance, and operations."]
         ].map(([n,t,d])=><article key={n} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition-shadow hover:shadow-lg"><span className="font-bold text-sky-800">{n}</span><h3 className="mt-3 text-xl font-bold">{t}</h3><p className="mt-3 text-slate-600">{d}</p></article>)}</div>
       </section>
-      <section id="applications" className="relative overflow-hidden bg-[#0c293f] py-20 text-white"><div className="mx-auto max-w-7xl px-5 lg:px-10"><p className="text-xs font-black uppercase tracking-[.2em] text-amber-300">Production • Maintenance • Operations</p><h2 className="mt-3 text-4xl font-black">For the teams that keep aircraft flying.</h2><div className="mt-8 grid gap-5 md:grid-cols-2">{applications.map(x=><article key={x.title} className="rounded-2xl border border-white/20 bg-white/[0.07] p-7 shadow-sm backdrop-blur-sm transition-colors hover:bg-white/[0.12]"><h3 className="text-xl font-bold">{x.title}</h3><p className="mt-3 text-slate-200">{x.description}</p></article>)}</div></div></section>
-      <section id="roi" className="bg-gradient-to-b from-slate-50 to-white py-20"><div className="mx-auto max-w-7xl px-5 lg:px-10"><p className="text-xs font-black uppercase tracking-[.2em] text-sky-800">Illustrative cost analysis</p><h2 className="mt-3 text-4xl font-black">What could a COPE cost your operation?</h2><div className="mt-8 grid gap-5 md:grid-cols-3">{[["$150K–$540K", "Illustrative annual loss range"],["1,400%", "Illustrative ROI"],["30 days", "Illustrative payback"]].map(([n,t])=><div key={n} className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm"><strong className="block text-3xl text-sky-900">{n}</strong><span className="mt-3 block text-slate-600">{t}</span></div>)}</div><p className="mt-6 max-w-4xl text-sm text-slate-600">Figures from a DeGroff-provided example model, not independently verified. Actual savings depend on incident frequency, operating conditions, cost inputs, and deployment. Validate the assumptions before publication.</p></div></section>
-      <section id="resources" className="mx-auto max-w-7xl px-5 py-20 lg:px-10"><TechnicalResources /></section><section id="demo" className="mx-auto max-w-7xl px-5 py-20 lg:px-10"><VideoGallery /></section>
-      <section id="contact" className="bg-[#081d30] py-20 text-white"><div className="mx-auto max-w-7xl px-5 lg:px-10"><h2 className="text-4xl font-black">Request a demonstration or quote</h2><p className="mt-5 max-w-3xl text-lg text-slate-200">Discuss aircraft compatibility, technical evaluations, and purchasing options with DeGroff Aviation Technologies™.</p><div className="mt-8 max-w-3xl rounded-xl border border-white/20 bg-white/10 p-7 text-slate-200"><LeadForm /></div></div></section>
+      <section id="applications" className="relative overflow-hidden bg-[#0c293f] py-14 text-white sm:py-16 lg:py-20"><div className="mx-auto max-w-7xl px-5 lg:px-10"><p className="text-xs font-black uppercase tracking-[.2em] text-amber-300">Production • Maintenance • Operations</p><h2 className="mt-3 text-3xl font-black sm:text-4xl">For the teams that keep aircraft flying.</h2><div className="mt-8 grid gap-5 md:grid-cols-2">{applications.map(x=><article key={x.title} className="rounded-2xl border border-white/20 bg-white/[0.07] p-7 shadow-sm backdrop-blur-sm transition-colors hover:bg-white/[0.12]"><h3 className="text-xl font-bold">{x.title}</h3><p className="mt-3 text-slate-200">{x.description}</p></article>)}</div></div></section>
+      <section id="roi" className="bg-gradient-to-b from-slate-50 to-white py-14 sm:py-16 lg:py-20"><div className="mx-auto max-w-7xl px-5 lg:px-10"><p className="text-xs font-black uppercase tracking-[.2em] text-sky-800">Illustrative cost analysis</p><h2 className="mt-3 text-3xl font-black sm:text-4xl">What could a COPE cost your operation?</h2><div className="mt-8 grid gap-5 md:grid-cols-3">{[["$150K–$540K", "Illustrative annual loss range"],["1,400%", "Illustrative ROI"],["30 days", "Illustrative payback"]].map(([n,t])=><div key={n} className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm"><strong className="block text-3xl text-sky-900">{n}</strong><span className="mt-3 block text-slate-600">{t}</span></div>)}</div><p className="mt-6 max-w-4xl text-sm text-slate-600">Figures from a DeGroff-provided example model, not independently verified. Actual savings depend on incident frequency, operating conditions, cost inputs, and deployment. Validate the assumptions before publication.</p></div></section>
+      <section id="resources" className="mx-auto max-w-7xl px-5 py-14 sm:py-16 lg:px-10 lg:py-20"><TechnicalResources /></section><section id="demo" className="mx-auto max-w-7xl px-5 py-14 sm:py-16 lg:px-10 lg:py-20"><VideoGallery /></section>
+      <section id="contact" className="bg-[#081d30] py-14 text-white sm:py-16 lg:py-20"><div className="mx-auto max-w-7xl px-5 lg:px-10"><h2 className="text-3xl font-black sm:text-4xl">Request a demonstration or quote</h2><p className="mt-5 max-w-3xl text-lg text-slate-200">Discuss aircraft compatibility, technical evaluations, and purchasing options with DeGroff Aviation Technologies™.</p><div className="mt-8 max-w-3xl rounded-xl border border-white/20 bg-white/10 p-7 text-slate-200"><LeadForm /></div></div></section>
     </main><footer className="bg-[#061625] px-5 py-7 text-center text-sm text-slate-300">© DeGroff Aviation Technologies™</footer>
   </div>;
 }
