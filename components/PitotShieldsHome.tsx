@@ -59,7 +59,7 @@ export function PitotShieldsHome() {
         </div>
       </section>
       <section id="how" className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
-        <p className="text-xs font-black uppercase tracking-[.2em] text-sky-800">How it works</p><h2 className="mt-3 text-4xl font-black">Small device. Big protection.</h2>
+        <p className="text-xs font-black uppercase tracking-[.2em] text-sky-800">How it works</p>
         <p className="mt-5 max-w-3xl text-lg text-slate-600">PitotShield V2™ SmartCovers™ are designed to disengage approximately 2–5 minutes after pitot heat activation under specified operating conditions.</p>
         <div className="mt-8 grid gap-5 md:grid-cols-3">{[
           ["01", "Thermally activated", "Designed for a controlled self-release when compatible pitot heat is applied."],
