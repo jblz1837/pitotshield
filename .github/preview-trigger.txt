@@ -9,3 +9,4 @@
 2026-11-19: Rebuild review preview after reducing homepage product photograph size for improved visual balance; production unchanged.
 2026-11-19: Rebuild preview after further proportional width/height reduction of homepage product photo; production unchanged.
 2026-11-19: Rebuild preview for minor 5-percent proportional reduction of homepage product photo; production unchanged.
+2026-11-19: Re-run approved GitHub Pages preview now that Pages source has been switched to GitHub Actions; retain pitotshields.com on original repository.
