@@ -1,4 +1,5 @@
 const clips = [
+["PitotShield V2™ SmartCovers™ — Featured Product Video","PitotShieldV2.mp4"],
 ["PitotShield V2™ Auto-Release Demonstration","psv2-demo.mp4"],
 ["Universal Fit Demonstration","PSV2 Universal Fit Demo.mp4"],
 ["Return-to-Service Procedure Training","PSV2 Return to Service Procedure Training Video.mp4"],
@@ -14,8 +15,8 @@ export default function VideoGallery(){
   <h2 className="mt-3 text-3xl font-bold sm:text-5xl">See PitotShield V2™ SmartCovers™ in action</h2>
   <p className="mt-4 max-w-3xl text-slate-600">Original DeGroff product footage and maintenance demonstrations. Press play to load a video. Always follow the latest approved aircraft and product instructions.</p>
   <div className="mt-8 grid gap-8 lg:grid-cols-2">
-   {clips.map(([title,file])=><article key={file} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-    <video controls playsInline preload="none" className="aspect-video w-full bg-slate-950" aria-label={title}>
+   {clips.map(([title,file])=><article key={file} className={file==="PitotShieldV2.mp4"?"overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm lg:col-span-2":"overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"}>
+    <video controls playsInline preload="none" className={file==="PitotShieldV2.mp4"?"h-[480px] w-full bg-slate-950 object-contain sm:h-[580px]":"aspect-video w-full bg-slate-950"} aria-label={title}>
      <source src={media(file)} type="video/mp4"/>
      Your browser cannot play this video. <a href={media(file)}>Download the MP4 file.</a>
     </video>
