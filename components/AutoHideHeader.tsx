@@ -24,6 +24,7 @@ export default function AutoHideHeader() {
         </a>
         <nav className="flex w-full min-w-0 flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-semibold tracking-wide sm:w-auto sm:flex-1 sm:justify-end sm:gap-x-4 sm:text-sm lg:gap-x-6 lg:text-base" aria-label="Main navigation">
           <a href="#how">Technology</a><a href="#applications">Applications</a><a href="#roi">ROI</a><a href="#demo">Demonstration</a><a href="#contact">Contact</a>
+          <a href="https://www.degroffaviation.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit DeGroff Aviation Technologies main website (opens in a new tab)" className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-amber-300/70 bg-amber-300 px-3 py-2 text-xs font-extrabold tracking-wide text-[#081d30] shadow-sm transition hover:border-amber-200 hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:px-4 sm:text-sm">DeGroff Aviation ↗</a>
         </nav>
       </div>
     </header>
