@@ -19,7 +19,7 @@ await page.route("https://api.emailjs.com/api/v1.0/email/send",async route=>{
 try{
  const resp=await page.goto(base,{waitUntil:"networkidle"});
  assert.equal(resp?.status(),200,"Homepage HTTP failure");
- assert.ok((await page.locator("h1").innerText()).includes("Stop Covered Pitot Events"));
+ assert.match((await page.locator("h1").innerText()).replace(/\s+/g, " ").trim(), /Stop Covered Pitot Events/);
  const logo=page.locator("header img");
  assert.ok(await logo.count(),"Header logo missing");
  const imageLoaded=await logo.evaluate(img=>img.complete && img.naturalWidth>0);
