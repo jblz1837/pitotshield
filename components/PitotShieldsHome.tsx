@@ -14,15 +14,10 @@ export function PitotShieldsHome() {
     <main>
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#071a2a] via-[#103b59] to-[#071a2a] text-white">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.11]" style={{backgroundImage:"linear-gradient(#d6eafb 1px,transparent 1px),linear-gradient(90deg,#d6eafb 1px,transparent 1px)",backgroundSize:"44px 44px"}} />
-          <div className="absolute -right-40 -top-40 h-[700px] w-[700px] rounded-full border border-cyan-200/15" />
-          <div className="absolute -right-24 -top-24 h-[540px] w-[540px] rounded-full border border-cyan-200/10" />
-          <div className="absolute -bottom-32 -left-40 h-[480px] w-[480px] rounded-full border border-cyan-200/10" />
-          <svg className="absolute -right-12 top-2 w-[570px] max-w-none rotate-[-12deg] text-cyan-100 opacity-[0.09] lg:right-[12%]" viewBox="0 0 720 480" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+          <svg className="absolute -right-12 top-2 w-[570px] max-w-none rotate-[-12deg] text-cyan-100 opacity-[0.07] lg:right-[12%]" viewBox="0 0 720 480" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
             <path d="M360 24 C373 45 380 86 381 140 L388 215 L640 312 L640 339 L390 291 L382 407 L458 438 L458 454 L360 443 L262 454 L262 438 L338 407 L330 291 L80 339 L80 312 L332 215 L339 140 C340 86 347 45 360 24Z" />
             <path d="M360 28 V442 M250 345 H472 M338 140 H382 M292 300 L430 300" strokeDasharray="8 9" />
             <circle cx="360" cy="252" r="195" strokeDasharray="9 13" opacity=".65" />
-            <circle cx="360" cy="252" r="240" strokeDasharray="3 14" opacity=".45" />
           </svg>
           <div className="absolute inset-0 bg-gradient-to-r from-[#071a2a]/70 via-transparent to-[#071a2a]/20" />
         </div>
