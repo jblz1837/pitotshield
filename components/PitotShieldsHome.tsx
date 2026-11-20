@@ -9,7 +9,7 @@ import TechnicalResources from "./TechnicalResources";
 import VideoGallery from "./VideoGallery";
 import AutoHideHeader from "./AutoHideHeader";
 export function PitotShieldsHome() {
-  return <div className="min-h-screen bg-white text-slate-900">
+  return <div className="blueprint-site min-h-screen bg-[#061d32] text-white">
     <AutoHideHeader />
     <main>
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#071a2a] via-[#103b59] to-[#071a2a] text-white">
