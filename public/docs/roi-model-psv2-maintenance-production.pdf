@@ -1,0 +1,772 @@
+%PDF-1.4
+%ASCII
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 1330 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(STOP RUINED PITOT PROBES) Tj
+T*
+( IN MAINTENANCE and OEM) Tj
+T*
+(       PRODUCTION) Tj
+T*
+() Tj
+T*
+( ROI MODEL FOR INSTITUTING PitotShield) Tj
+T*
+( V2\(TM\) SmartCover\(TM\) THERMALLY-ACTIVATED) Tj
+T*
+(     SELF-REMOVING PITOT COVER TO) Tj
+T*
+(  MITIGATE COPES \(COvered Pitot EventS\)) Tj
+T*
+() Tj
+T*
+(We have surveyed hundreds of aircraft maintenance and GS technicians and) Tj
+T*
+(engineers and managers, tech-ops procurement personnel and EOM production) Tj
+T*
+(engineers to estimate the incidence of Maintenance and Production related) Tj
+T*
+(Covered Pitot Events \(COPES\). Our results indicate that an average capacity MRO) Tj
+T*
+(station performing medium and heavy maintenance experiences three COPES) Tj
+T*
+(yearly causing damaged pitot probes from covers being left in place on heated) Tj
+T*
+(pitot tubes while testing systems. The actual number is unknown and is likely) Tj
+T*
+(higher given hesitancy to report. Assuming three probes damaged per incident,) Tj
+T*
+(we developed the following engineering-economic model based on typical) Tj
+T*
+(commercial MRO and OEM operations. Because OEMs, Airlines and MROs do not) Tj
+T*
+(publish these events, the assumptions are necessarily estimates, but they are) Tj
+T*
+(consistent with industry replacement costs and operational impacts.) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 1185 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(Assumptions) Tj
+T*
+() Tj
+T*
+(Maintenance Facility) Tj
+T*
+() Tj
+T*
+(   *   Medium/heavy maintenance MRO) Tj
+T*
+() Tj
+T*
+(   *   Performs C-checks, heavy checks, modifications, and return-to-service testing) Tj
+T*
+() Tj
+T*
+(   *   Experiences 3 COPES incidents/year) Tj
+T*
+() Tj
+T*
+(   *   Average 3 pitot probes damaged per incident) Tj
+T*
+() Tj
+T*
+(   *   Total damaged probes/year = 9 probes) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Cost per Damaged Probe) Tj
+T*
+() Tj
+T*
+(Cost Element                         Estimate) Tj
+T*
+() Tj
+T*
+(New pitot probe                      $3,500-30,000) Tj
+T*
+() Tj
+T*
+(Shipping/AOG logistics               $500-2,000) Tj
+T*
+() Tj
+T*
+(Removal & installation labor \(3-6 hrs\) $500-900) Tj
+T*
+() Tj
+T*
+(Functional testing/documentation     $300-700) Tj
+T*
+() Tj
+T*
+(Engineering/QA paperwork             $200-500) Tj
+T*
+() Tj
+T*
+(Subtotal \(direct\)                    $5,000-36,000) Tj
+T*
+() Tj
+T*
+(A reasonable planning value is:) Tj
+T*
+() Tj
+T*
+($8,000 per damaged probe) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Three Probes Damaged) Tj
+T*
+() Tj
+T*
+(Direct replacement cost:) Tj
+T*
+() Tj
+T*
+(3 x $8,000 = $24,000) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1040 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(Aircraft Downtime) Tj
+T*
+() Tj
+T*
+(Even during scheduled maintenance, discovering destroyed pitot probes usually means:) Tj
+T*
+() Tj
+T*
+(   *     locating replacement parts) Tj
+T*
+() Tj
+T*
+(   *     engineering review) Tj
+T*
+() Tj
+T*
+(   *     replacing multiple probes) Tj
+T*
+() Tj
+T*
+(   *     repeating system tests) Tj
+T*
+() Tj
+T*
+(   *     rescheduling work) Tj
+T*
+() Tj
+T*
+(Typical additional maintenance delay:) Tj
+T*
+() Tj
+T*
+(6-24 hours) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Typical heavy maintenance downtime value:) Tj
+T*
+() Tj
+T*
+(   *     $5,000-20,000/hour depending on aircraft and schedule) Tj
+T*
+() Tj
+T*
+(Using a conservative blended estimate:) Tj
+T*
+() Tj
+T*
+(8 hours x $7,500/hr = $60,000) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Additional Labor) Tj
+T*
+() Tj
+T*
+(Unexpected troubleshooting) Tj
+T*
+() Tj
+T*
+(   *     avionics) Tj
+T*
+() Tj
+T*
+(   *     QA) Tj
+T*
+() Tj
+T*
+(   *     inspectors) Tj
+T*
+() Tj
+T*
+(   *     maintenance control) Tj
+T*
+() Tj
+T*
+(Estimated:) Tj
+T*
+() Tj
+T*
+($4,000) Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 833 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(Administrative Costs) Tj
+T*
+() Tj
+T*
+(   *     purchasing) Tj
+T*
+() Tj
+T*
+(   *     logistics) Tj
+T*
+() Tj
+T*
+(   *     engineering) Tj
+T*
+() Tj
+T*
+(   *     paperwork) Tj
+T*
+() Tj
+T*
+(Estimated:) Tj
+T*
+() Tj
+T*
+($2,000) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Total Estimated Cost per Incident) Tj
+T*
+() Tj
+T*
+(Component                    Cost) Tj
+T*
+() Tj
+T*
+(Three replacement probes $24,000) Tj
+T*
+() Tj
+T*
+(Aircraft downtime            $60,000) Tj
+T*
+() Tj
+T*
+(Additional labor             $4,000) Tj
+T*
+() Tj
+T*
+(Logistics/admin              $2,000) Tj
+T*
+() Tj
+T*
+(Estimated total              $90,000) Tj
+T*
+() Tj
+T*
+(A reasonable range would be:) Tj
+T*
+() Tj
+T*
+(   *     Low case: $50,000) Tj
+T*
+() Tj
+T*
+(   *     Expected: $90,000) Tj
+T*
+() Tj
+T*
+(   *     High case: $180,000+) Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 862 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(Annual Cost) Tj
+T*
+() Tj
+T*
+(Three incidents/year) Tj
+T*
+() Tj
+T*
+(Expected value:) Tj
+T*
+() Tj
+T*
+(3 x $90,000 = $270,000/year) Tj
+T*
+() Tj
+T*
+(Range:) Tj
+T*
+() Tj
+T*
+(   *   Conservative: $150,000/year) Tj
+T*
+() Tj
+T*
+(   *   Expected: $270,000/year) Tj
+T*
+() Tj
+T*
+(   *   High: $540,000/year) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Cost of the Self-Releasing Cover) Tj
+T*
+() Tj
+T*
+(Assume:) Tj
+T*
+() Tj
+T*
+(   *   $600 each) Tj
+T*
+() Tj
+T*
+(   *   Three pitot tubes on average aircraft) Tj
+T*
+() Tj
+T*
+(   *   One aircraft occupies a maintenance position) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Investment:) Tj
+T*
+() Tj
+T*
+(3 covers x $600 = $1,800) Tj
+T*
+() Tj
+T*
+(Even if an MRO equips:) Tj
+T*
+() Tj
+T*
+(   *   10 maintenance bays) Tj
+T*
+() Tj
+T*
+(Investment:) Tj
+T*
+() Tj
+T*
+(10 x 3 x $600) Tj
+T*
+() Tj
+T*
+(= $18,000) Tj
+T*
+ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+14 0 obj
+<< /Length 938 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(ROI) Tj
+T*
+() Tj
+T*
+(Annual avoided damage:) Tj
+T*
+() Tj
+T*
+($270,000) Tj
+T*
+() Tj
+T*
+(Investment:) Tj
+T*
+() Tj
+T*
+($18,000) Tj
+T*
+() Tj
+T*
+(Annual ROI:) Tj
+T*
+(                                      270,000 - 18,000) Tj
+T*
+(                              ROI =) Tj
+T*
+(                                           18,000) Tj
+T*
+(~ 1,400%) Tj
+T*
+() Tj
+T*
+(Payback:) Tj
+T*
+() Tj
+T*
+(                            18,000/270,000 = 0.067 years) Tj
+T*
+(~ 25 days) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Larger Facility Example) Tj
+T*
+() Tj
+T*
+(Suppose an MRO has:) Tj
+T*
+() Tj
+T*
+(   *   25 maintenance positions) Tj
+T*
+() Tj
+T*
+(   *   75 covers required) Tj
+T*
+() Tj
+T*
+(Investment:) Tj
+T*
+() Tj
+T*
+(75 x $600) Tj
+T*
+() Tj
+T*
+(= $45,000) Tj
+T*
+() Tj
+T*
+(Avoided annual loss:) Tj
+T*
+() Tj
+T*
+($270,000) Tj
+T*
+() Tj
+T*
+(ROI:) Tj
+T*
+() Tj
+T*
+(500%) Tj
+T*
+() Tj
+T*
+(Payback:) Tj
+T*
+() Tj
+T*
+(about 2 months) Tj
+T*
+ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+16 0 obj
+<< /Length 1193 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(Fleet-Level Model) Tj
+T*
+() Tj
+T*
+(Suppose there are approximately 250 U.S. heavy commercial and business-jet MRO) Tj
+T*
+(facilities performing the type of maintenance where pitot heat activation is routine.) Tj
+T*
+() Tj
+T*
+(Annual industry loss:) Tj
+T*
+() Tj
+T*
+(250 x 3 incidents x $90,000) Tj
+T*
+() Tj
+T*
+(= $67.5 million/year) Tj
+T*
+() Tj
+T*
+(If the technology eliminated 95% of incidents:) Tj
+T*
+() Tj
+T*
+(Savings:) Tj
+T*
+() Tj
+T*
+(~ $64 million annually) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Sensitivity Analysis) Tj
+T*
+() Tj
+T*
+(Cost/Incident Incidents/Year Annual Loss) Tj
+T*
+() Tj
+T*
+($50,000          3              $150,000) Tj
+T*
+() Tj
+T*
+($75,000          3              $225,000) Tj
+T*
+() Tj
+T*
+($90,000          3              $270,000) Tj
+T*
+() Tj
+T*
+($120,000         3              $360,000) Tj
+T*
+() Tj
+T*
+($180,000         3              $540,000) Tj
+T*
+() Tj
+T*
+(Business Case Summary) Tj
+T*
+() Tj
+T*
+(Metric                     Value) Tj
+T*
+() Tj
+T*
+(Incidents/year             3) Tj
+T*
+() Tj
+T*
+(Probes damaged/incident 3) Tj
+T*
+() Tj
+T*
+(Average cost/probe         $8,000) Tj
+T*
+() Tj
+T*
+(Average cost/incident      $90,000) Tj
+T*
+ET
+endstream
+endobj
+17 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+18 0 obj
+<< /Length 1233 >>
+stream
+BT
+/F1 9 Tf
+12 TL
+48 746 Td
+(Metric                     Value) Tj
+T*
+() Tj
+T*
+(Annual loss                $270,000) Tj
+T*
+() Tj
+T*
+(Cost per cover             $600) Tj
+T*
+() Tj
+T*
+(Covers for 10-bay MRO      30) Tj
+T*
+() Tj
+T*
+(Total investment           $18,000) Tj
+T*
+() Tj
+T*
+(Expected annual savings $270,000) Tj
+T*
+() Tj
+T*
+(Annual ROI                 ~1,400%) Tj
+T*
+() Tj
+T*
+(Payback                    ~25 days) Tj
+T*
+() Tj
+T*
+(Notes on uncertainty) Tj
+T*
+() Tj
+T*
+(The largest driver of total cost is aircraft downtime, not the replacement pitot probes) Tj
+T*
+(themselves. If the damage is discovered during a scheduled heavy check with no effect on) Tj
+T*
+(the return-to-service date, the cost per incident could be closer to $50,000-$70,000.) Tj
+T*
+(Conversely, if the event creates an aircraft-on-ground \(AOG\) situation or delays delivery to) Tj
+T*
+(the operator, costs can readily exceed $150,000-$250,000 for a single incident. Even under) Tj
+T*
+(the conservative assumptions, a $600 self-disengaging pitot cover that reliably prevents) Tj
+T*
+(these events yields a compelling economic case with a very short payback period.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(                                          # # #) Tj
+T*
+ET
+endstream
+endobj
+19 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000169 00000 n 
+0000000264 00000 n 
+0000001645 00000 n 
+0000001771 00000 n 
+0000003007 00000 n 
+0000003133 00000 n 
+0000004224 00000 n 
+0000004350 00000 n 
+0000005234 00000 n 
+0000005362 00000 n 
+0000006275 00000 n 
+0000006403 00000 n 
+0000007392 00000 n 
+0000007520 00000 n 
+0000008765 00000 n 
+0000008893 00000 n 
+0000010178 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R >>
+startxref
+10306
+%%EOF
