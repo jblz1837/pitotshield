@@ -36,6 +36,7 @@ body { margin: 0; }
 .blueprint-site main > section a.text-sky-800 { color: #f4d48b; }
 .blueprint-site #how article,
 .blueprint-site #roi .grid > div,
+.blueprint-site #roi a.block,
 .blueprint-site #resources a,
 .blueprint-site #demo article {
   background: rgba(6, 31, 54, .83);
@@ -45,15 +46,18 @@ body { margin: 0; }
 }
 .blueprint-site #how article:hover,
 .blueprint-site #resources a:hover,
+.blueprint-site #roi a.block:hover,
 .blueprint-site #demo article:hover { border-color: rgba(244, 212, 139, .75); }
 .blueprint-site #how article p.text-slate-600,
 .blueprint-site #resources a p.text-slate-600,
 .blueprint-site #demo article p.text-slate-600,
-.blueprint-site #roi .grid span.text-slate-600 {
+.blueprint-site #roi .grid span.text-slate-600,
+.blueprint-site #roi a.block p.text-slate-600 {
   color: #c6dbe8;
 }
 .blueprint-site #how article span.text-sky-800,
 .blueprint-site #roi strong.text-sky-900,
+.blueprint-site #roi a.block span.text-sky-800,
 .blueprint-site #demo article a.text-sky-800 {
   color: #f4d48b;
 }
