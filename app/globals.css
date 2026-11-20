@@ -4,50 +4,61 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; }
 
-/* Unified aviation-blueprint treatment across the complete PitotShields homepage. */
+/* PitotShields blueprint: a single clean grid, restrained highlights, one gold. */
+.blueprint-site {
+  --blueprint-gold: #fcd34d; /* Same amber-300 used by the (COPEs) headline. */
+  background: #071d30;
+}
 .blueprint-site main {
-  background-color: #061d32;
+  background-color: #071d30;
   background-image:
-    radial-gradient(ellipse at 80% 8%, rgba(43, 112, 151, .32), transparent 47%),
-    radial-gradient(ellipse at 16% 68%, rgba(34, 94, 139, .28), transparent 50%),
-    linear-gradient(rgba(131, 205, 239, .10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(131, 205, 239, .10) 1px, transparent 1px),
-    linear-gradient(rgba(131, 205, 239, .045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(131, 205, 239, .045) 1px, transparent 1px);
-  background-size: auto, auto, 48px 48px, 48px 48px, 12px 12px, 12px 12px;
+    radial-gradient(ellipse at 75% 12%, rgba(39, 104, 145, .20), transparent 51%),
+    linear-gradient(rgba(149, 207, 237, .075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(149, 207, 237, .075) 1px, transparent 1px);
+  background-size: auto, 64px 64px, 64px 64px;
 }
 .blueprint-site main > section {
   background-color: transparent;
   background-image: none;
   color: #f1f8fc;
-  border-bottom: 1px solid rgba(157, 213, 244, .19);
+  border-bottom: 1px solid rgba(157, 213, 244, .15);
 }
-.blueprint-site main > section:first-child { border-bottom-color: rgba(157, 213, 244, .28); }
+.blueprint-site main > section:first-child {
+  border-bottom-color: rgba(157, 213, 244, .20);
+}
 .blueprint-site main > section p.text-slate-600,
 .blueprint-site main > section span.text-slate-600 {
   color: #c6dbe8;
 }
+/* Gold labels, numbers, document links and video links match the hero COPEs text. */
+.blueprint-site .text-amber-300,
 .blueprint-site main > section p.text-sky-800,
 .blueprint-site main > section p.text-sky-900,
-.blueprint-site main > section span.text-sky-800 {
-  color: #f4d48b;
-}
+.blueprint-site main > section span.text-sky-800,
 .blueprint-site main > section a.text-sky-900,
-.blueprint-site main > section a.text-sky-800 { color: #f4d48b; }
+.blueprint-site main > section a.text-sky-800,
+.blueprint-site #how article span.text-sky-800,
+.blueprint-site #roi strong.text-sky-900,
+.blueprint-site #roi a.block span.text-sky-800,
+.blueprint-site #demo article a.text-sky-800 {
+  color: var(--blueprint-gold);
+}
 .blueprint-site #how article,
 .blueprint-site #roi .grid > div,
 .blueprint-site #roi a.block,
 .blueprint-site #resources a,
 .blueprint-site #demo article {
-  background: rgba(6, 31, 54, .83);
+  background: rgba(8, 33, 54, .88);
   color: #f1f8fc;
-  border-color: rgba(162, 216, 245, .30);
-  box-shadow: 0 9px 29px rgba(0, 0, 0, .14);
+  border-color: rgba(162, 216, 245, .24);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
 }
 .blueprint-site #how article:hover,
 .blueprint-site #resources a:hover,
 .blueprint-site #roi a.block:hover,
-.blueprint-site #demo article:hover { border-color: rgba(244, 212, 139, .75); }
+.blueprint-site #demo article:hover {
+  border-color: rgba(252, 211, 77, .68);
+}
 .blueprint-site #how article p.text-slate-600,
 .blueprint-site #resources a p.text-slate-600,
 .blueprint-site #demo article p.text-slate-600,
@@ -55,18 +66,14 @@ body { margin: 0; }
 .blueprint-site #roi a.block p.text-slate-600 {
   color: #c6dbe8;
 }
-.blueprint-site #how article span.text-sky-800,
-.blueprint-site #roi strong.text-sky-900,
-.blueprint-site #roi a.block span.text-sky-800,
-.blueprint-site #demo article a.text-sky-800 {
-  color: #f4d48b;
-}
 .blueprint-site #applications article,
 .blueprint-site #contact .rounded-xl {
-  background-color: rgba(8, 39, 65, .80);
-  border-color: rgba(162, 216, 245, .30);
+  background-color: rgba(9, 37, 61, .84);
+  border-color: rgba(162, 216, 245, .24);
 }
-.blueprint-site #applications article:hover { background-color: rgba(19, 65, 96, .90); }
+.blueprint-site #applications article:hover {
+  background-color: rgba(20, 65, 95, .91);
+}
 .blueprint-site #contact input,
 .blueprint-site #contact select,
 .blueprint-site #contact textarea {
