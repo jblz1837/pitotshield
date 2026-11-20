@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: "20"
       - run: npm install --no-audit --no-fund
+      - name: Install video thumbnail generator (FFmpeg)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Type check
         run: npm run typecheck
       - name: Build for production apex domain (root paths)
