@@ -9,7 +9,7 @@ const documents = [
 const path=(file:string)=>`${process.env.NEXT_PUBLIC_BASE_PATH??""}/docs/${encodeURIComponent(file)}`;
 export default function TechnicalResources(){
  return <section aria-label="Technical resources">
- <p className="text-sm font-bold uppercase tracking-widest text-sky-800">Engineering references</p>
+ <p className="text-lg font-black uppercase tracking-[.12em] text-sky-800 sm:text-xl">Engineering references</p>
  <h2 className="mt-3 text-3xl font-bold sm:text-5xl">Technical resources</h2>
  <p className="mt-4 max-w-3xl text-slate-600">Download the original technical PDFs directly from this site. Read the complete User Instruction Manual before using the product. Two legacy placeholder-only PDFs remain at their old addresses for link compatibility but are not presented here as technical guidance.</p>
  <div className="mt-8 grid gap-5 md:grid-cols-2">
