@@ -13,7 +13,7 @@ const media=(file:string)=>`${process.env.NEXT_PUBLIC_BASE_PATH??""}/assets/${en
 const posterSrc=(file:string)=>`${process.env.NEXT_PUBLIC_BASE_PATH??""}/assets/posters/${encodeURIComponent(file)}`;
 export default function VideoGallery(){
  return <section aria-label="Product videos">
-  <p className="text-sm font-bold uppercase tracking-widest text-sky-800">Real aircraft demonstrations</p>
+  <p className="text-lg font-black uppercase tracking-[.12em] text-sky-800 sm:text-xl">Real aircraft demonstrations</p>
   <h2 className="mt-3 text-3xl font-bold sm:text-5xl">See PitotShield V2™ SmartCovers™ in action</h2>
   <p className="mt-4 max-w-3xl text-slate-600">Original DeGroff product footage and maintenance demonstrations. Press play to load a video. Always follow the latest approved aircraft and product instructions.</p>
   <div className="mt-8 grid gap-8 lg:grid-cols-2">
